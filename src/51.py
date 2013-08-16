@@ -3,7 +3,7 @@ import itertools
 num_set = ['0','1','2','3','4','5','6','7','8','9','*']
 primes = sieve(100000000)
 print('primes generated')
-
+'''
 def checkPrimeFamily(n):
     count = 0
     m = [i for i in n]
@@ -70,7 +70,7 @@ for triple_list in paired_m:
             break
         else:
             triple_list.remove(s)
-'''   
+
             
             
 

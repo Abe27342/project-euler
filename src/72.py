@@ -1,6 +1,5 @@
 from helpers import sieve
-from functools import reduce
-from operator import mul
+
 primes = sieve(1000000)
 prime_pow = [[p**power for power in range(1, 21) if p**power < 1000000] for p in primes]
 print('primes generated')

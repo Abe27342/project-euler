@@ -1,11 +1,12 @@
 '''
 idea: hope to god that the set is 3,7,109,673, p for some prime p.
 '''
-from helpers import sieve, isPrime
-primes = sieve(100000)
-print "primes generated"
+from helpers import sieve
+primes = sieve(100000000)
+print("primes generated")
 
-
+def isPrime(n):
+    return(n in primes)
 not_done = True
 def concat(a,b):
     return(int(str(a) + str(b)))
@@ -14,6 +15,8 @@ def check_concat(n):
     
 
 for p in primes:
+    if(p > 100000):
+        break
     if check_concat(p):
         print(p)
-print "none :("
+print("none :(")

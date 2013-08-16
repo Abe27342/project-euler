@@ -48,3 +48,15 @@ def isPalindrome(n):
         return True
     else:
         return False
+
+def gcd(a,b):
+    if(a == 0):
+        return(b)
+    if(b == 0):
+        return(a)
+    if(a == b):
+        return(a)
+    if(a > b):
+        return(gcd(b,a % b))
+    if(b > a):
+        return(gcd(a,b % a))
