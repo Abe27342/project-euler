@@ -1,30 +1,22 @@
+'''
+
+this code sucks
+
+also used this:
+
+
+from helpers import isPrime
+x = sum([isPrime(101010*k+20303) for k in range(1,10)])
+print(x)
+'''
+
+
 from helpers import sieve
 import itertools
 num_set = ['0','1','2','3','4','5','6','7','8','9','*']
-primes = sieve(100000000)
+primes = sieve(10000000)
 print('primes generated')
-'''
-def checkPrimeFamily(n):
-    count = 0
-    m = [i for i in n]
-    for i in range(10):
-        for x in range(len(n)):
-            if(n[x] == '*'):
-                m[x] = str(i)
-        if(int(''.join(m)) in primes):
-            count += 1
-    if(count > 7):
-        print(n)
 
-
-for raw_num_list in itertools.product(num_set,repeat=7):
-    raw_num_list = [i for i in raw_num_list]
-    if(raw_num_list.count('*') == 3):
-        for i in ['1','3','7','9']:
-            raw_num_list.append(i)
-            checkPrimeFamily(raw_num_list)
-
-'''
 def triple_digit(n):
     n = str(n)[0:-1]
     x = [n.count(i) for i in n]
@@ -65,7 +57,7 @@ for triple_list in paired_m:
         triple_list[i] = ''.join(element)
     #print(triple_list)
     for s in triple_list:
-        if(triple_list.count(s) == 8):
+        if(triple_list.count(s) > 5):
             print(s)
             break
         else:

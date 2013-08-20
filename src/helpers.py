@@ -14,7 +14,7 @@ def sieve(n):
     return [i for (i, b) in enumerate(s) if b]
 
 def isPrime(n):
-    return all([n > 1] + [n % i != 0 for i in range(2,int(n**0.5+1))])
+    return all([n > 1] + [n % 2 != 0] + [n % 3 != 0] + [n % (6*i+1) != 0 and n % (6*i-1) != 0 for i in range(1,int((n**0.5+6)/6))])
 
 pl = sieve(100000)
 def isPrimeSieve(n):
