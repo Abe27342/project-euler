@@ -4,7 +4,7 @@ class change_counter:
         self.l = []
     
     
-    def __f(self,s,n,m):
+    def _f(self,s,n,m):
 
         if(n < 0):
             return(0)
@@ -19,9 +19,9 @@ class change_counter:
         self.make_change(range(1,n+1),n)
         return(self.l)
     def make_change(self,s,n):
-        return(self.__make_change(s,n,len(s)))
+        return(self._make_change(s,n,len(s)))
 
-    def __make_change(self,s,n,m):
+    def _make_change(self,s,n,m):
         self.l = [[1]]
         #l[i][j] will contain make_change(i,j)
         #make_change(i,j) should be the number of ways to make change for i using the first j elements of set s... so that's s[0],s[1],...,s[j-1]
