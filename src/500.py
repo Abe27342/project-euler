@@ -1,5 +1,5 @@
 from heapq import heappush, heappop
-from helpers import sieve
+from .helpers import sieve
 
 primes = sieve(10**7)
 limit = 500500
